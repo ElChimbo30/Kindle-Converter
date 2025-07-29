@@ -19,6 +19,7 @@ function App() {
           <p id="text-archivo">Upload your files</p>
         </div>
       </header>
+      <p>Customize text</p>
     </>
   );
 }
