@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Oswald:wght@200..700&display=swap");
+
 body {
   margin: 0;
+  width: 100vw;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 /* HEADER */
 
@@ -11,7 +17,7 @@ body {
   width: 100vw;
   color: var(--text-color);
   background-color: var(--secundary-color);
-  height: 586px;
+  height: 452px;
   position: relative;
   z-index: -1;
   background: linear-gradient(270deg, #3993bc, var(--secundary-color));
@@ -22,7 +28,7 @@ body {
   position: absolute;
   bottom: -100px; /* mueve la curva hacia abajo */
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   background-color: white; /* color del fondo de la página */
   border-radius: 50%;
@@ -30,20 +36,21 @@ body {
 }
 
 #header-description {
-  font-size: 30px;
-  font-weight: none;
+  font-size: 26px;
+  font-weight: bolder;
+  font-family: "Faculty Glyphic";
   color: var(--text-color);
 }
 
 #main__title {
-  font-size: 90px;
+  font-size: 58px;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
   align-content: center;
   background-color: var(--main-color);
-  width: 700px;
-  height: 130px;
+  width: 450px;
+  height: 100px;
   margin-bottom: 0px;
   text-align: center;
   border-radius: 80px;
@@ -54,8 +61,8 @@ body {
 /* Arrastrar Div */
 
 #archivoDiv {
-  margin-top: 50px;
-  position: rel;
+  margin-top: 55px;
+  position: relative;
   justify-content: center;
   align-items: center;
   z-index: 20;
@@ -66,8 +73,8 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: var(--main-color);
-  width: 950px;
-  height: 310px;
+  width: 760px;
+  height: 200px;
   border-style: solid;
   padding: 10px;
   border-radius: 20px;
@@ -75,7 +82,8 @@ body {
 
 #text-archivo {
   text-align: center;
-  font-size: 40px;
+  font-size: 32px;
+  font-family: Montserrat;
   font-weight: bolder;
   margin-top: 1px;
 }
@@ -83,5 +91,166 @@ body {
 #img-archivo {
   margin-bottom: 1px;
   align-items: center;
-  width: 210px;
+  width: 140px;
 }
+
+/* Options card */
+
+#custom__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-right: 1200px;
+}
+
+#options__wrapper {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* separación entre inputs */
+}
+
+#custom__title {
+  font-family: "Montserrat";
+  margin: 8px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#format__design {
+  margin-left: 15px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-left: 30px;
+}
+
+.label__design {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.options__text {
+  font-size: 22px;
+  font-family: Montserrat;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input__design::placeholder {
+  color: #5d5c5c;
+}
+
+.input__design {
+  margin-left: 32px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #000;
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+  max-width: 250px;
+  width: 226px;
+  height: 32px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid #d3d3d3;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+.input__design:hover {
+  border: 2px solid #808080;
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.input__design:active {
+  transform: scale(0.95);
+}
+
+.input__design:focus {
+  border: 2px solid #a99f9f;
+}
+
+.select__design {
+  margin-bottom: 20px;
+
+  margin-left: 32px;
+  color: #5d5c5c;
+  width: 100%;
+  font-size: 26px;
+  text-align: center;
+  max-width: 250px;
+  height: 60px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid #d3d3d3;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+.select__design:hover {
+  border: 2px solid #808080;
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.select__design:active {
+  transform: scale(0.95);
+}
+
+.select__design:focus {
+  color: #000;
+  border: 2px solid #a99f9f;
+}
+
+/* Kindle Preview */
+
+#kindle__preview {
+  width: 320px; /* simula un Kindle Paperwhite */
+  height: 430px;
+  aspect-ratio: 3 / 4;
+  background: #fdfcf8;
+  border: 8px solid #222; /* borde negro típico */
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #000;
+  overflow-y: auto;
+  font-family: "Georgia", serif;
+  position: relative;
+}
+
+/* Botón inferior de Kindle */
+#kindle__preview::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 6px;
+  background: #666;
+  border-radius: 3px;
+  opacity: 0.7;
+}
+
+/* Pantalla interna */
+#kindle__inter {
+  background: #fff;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Centering kindle prewiew */
