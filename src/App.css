@@ -96,40 +96,51 @@ body {
 
 /* Options card */
 
-#custom__container {
+#container {
   display: flex;
+  gap: 8rem;
   align-items: center;
+  padding: 2rem;
   justify-content: center;
-  flex-direction: column;
-  margin-top: 100px;
-  margin-right: 1200px;
+  margin: 68px auto 0 auto; /* top right bottom left */
 }
 
-#options__wrapper {
+#left__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom__title {
+  font-family: "Montserrat";
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  align-self: flex-start;
+  width: 100%;
+}
+
+#format__design {
+  margin-bottom: 0;
   background: white;
-  border: none;
   border-radius: 20px;
-  padding: 30px 20px;
-  width: 90%;
+  padding: 8px 20px;
+  width: auto;
   max-width: 500px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   gap: 25px; /* separación entre inputs */
+  display: inline-block;
 }
 
-#custom__title {
-  font-family: "Montserrat";
-  margin: 8px;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-#format__design {
-  margin-left: 15px;
-  box-sizing: border-box;
-  margin-bottom: 0;
-  margin-left: 30px;
+#align__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .label__design {
@@ -210,47 +221,76 @@ body {
   border: 2px solid #a99f9f;
 }
 
+/* Centering kindle prewiew */
+.right__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* CAMBIA de center a flex-start */
+  align-items: flex-start; /* CAMBIA de center a flex-start */
+  padding-left: 30px; /* Alinea con el margin-left de #format__design */
+}
 /* Kindle Preview */
 
 #kindle__preview {
-  width: 320px; /* simula un Kindle Paperwhite */
-  height: 430px;
-  aspect-ratio: 3 / 4;
-  background: #fdfcf8;
-  border: 8px solid #222; /* borde negro típico */
-  border-radius: 16px;
-  padding: 20px;
-  margin-top: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  font-size: 18px;
-  color: #000;
-  overflow-y: auto;
-  font-family: "Georgia", serif;
-  position: relative;
+  position: relative; /* necesario para el ::after */
+  width: 600px;
+  height: 800px;
+  background: #fff;
+  border-radius: 24px;
+  border: 2px solid black;
+
+  /* Sombra para simular que flota y que contraste con fondo blanco */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25),
+    /* sombra principal abajo */ 0 6px 12px rgba(0, 0, 0, 0.15),
+    /* sombra secundaria más suave */ inset 0 0 8px rgba(0, 0, 0, 0.05); /* sombra interior suave para profundidad */
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
 }
 
 /* Botón inferior de Kindle */
 #kindle__preview::after {
   content: "";
   position: absolute;
-  bottom: 8px;
+  bottom: 20px; /* mejor separación del borde */
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 6px;
-  background: #666;
-  border-radius: 3px;
+  width: 60px; /* un poco más ancho */
+  height: 8px;
+  background: linear-gradient(to bottom, #aaa, #666);
+  border-radius: 4px;
   opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#kindle__preview:hover::after {
+  opacity: 1;
+  transform: translateX(-50%);
 }
 
 /* Pantalla interna */
-#kindle__inter {
-  background: #fff;
-  width: auto;
-  height: auto;
-  border-radius: 6px;
-  padding: 15px;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+
+#kindle__border {
+  background-color: #e9e3df;
+  width: 100%;
+  height: 100%;
 }
 
-/* Centering kindle prewiew */
+#kindle__inter {
+  position: absolute;
+  top: 30px; /* espacio desde el borde superior */
+  left: 25px; /* espacio desde el borde izquierdo */
+  right: 25px; /* espacio desde el borde derecho */
+  bottom: 60px; /* espacio para dejar el botón inferior visible */
+  background: #fff; /* fondo oscuro tipo pantalla */
+  border-radius: 16px;
+  box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.1),
+    /* brillo interno suave */ inset 0 0 5px rgba(0, 0, 0, 0.8); /* sombra interna para profundidad */
+  border: 2px solid #333; /* borde sutil oscuro */
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  overflow-wrap: break-word;
+  font-size: 13.3px;
+  overflow-y: hidden;
+}
