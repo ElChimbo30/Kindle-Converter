@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
   background-color: #f9fafb;
@@ -118,26 +118,44 @@ body {
 .advanced__wrapper {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  z-index: 200px;
   width: auto;
+  height: auto;
+  padding: 0 40px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
-  border: 1px solid black;
   z-index: 400;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.advanced__main__wrapper {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  z-index: 400;
+  margin-bottom: 80px;
 }
 
 .settings__name {
   z-index: 400;
+  font-family: "Montserrat";
+  font-size: 42px;
+  margin-bottom: 18px;
 }
 /* Options card */
 
 #container {
   display: flex;
-  gap: 8rem;
+  gap: 4rem;
   align-items: center;
-  padding: 2rem;
+  padding: 8px;
   justify-content: center;
-  margin: 68px auto 0 auto; /* top right bottom left */
+  padding-bottom: 40px;
+  background-color: #fff;
 }
 
 #left__column {
@@ -328,4 +346,101 @@ body {
   overflow-wrap: break-word;
   font-size: 13.3px;
   overflow-y: hidden;
+}
+
+/* Email Wrapper */
+
+.email__main {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 32px;
+  font-family: Montserrat;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.send__button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Montserrat", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 55px;
+  width: auto;
+  padding: 14px 28px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms ease;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+  display: block; /* necesario para que width funcione */
+}
+
+.send__button:hover {
+  background-color: #2f2f2f; /* oscurece en hover */
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.send__button:active {
+  transform: scale(0.96);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input__email {
+  width: auto;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  transition: all 200ms ease;
+  box-sizing: border-box;
+}
+
+/* Al hacer focus */
+.input__email:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Placeholder */
+.input__email::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.form__send {
+  display: flex;
+  align-items: center; /* centra horizontalmente */
+  justify-content: center;
+  gap: 12px; /* separación entre input y botón */
+  width: 100%; /* ocupa todo el ancho disponible */
+}
+
+.label__send {
+  width: 100%;
+  display: flex; /* o flex-column si quieres apilar input + botón */
+  width: auto;
+  gap: 12px; /* si es horizontal */
+  align-items: center; /* centra verticalmente */
+  font-size: 32px;
+  font-family: Montserrat;
+  font-weight: bold;
 }
