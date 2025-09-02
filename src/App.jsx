@@ -22,12 +22,14 @@ function App() {
         <div className="header__oval"></div>
       </header>
       <div className="advanced__main__wrapper">
-        <h3 className="settings__name">Advanced settings</h3>
+        <h3 className="settings__name" id="settings__name">
+          Personalize your reading settings
+        </h3>
         <div className="advanced__wrapper">
           <div id="container">
             {/* Main section */}
             <div id="left__column">
-              <h4 className="custom__title">Customize file</h4>
+              <h4 className="custom__title">Options</h4>
               <div id="inputs__wrapper">
                 {/* Optciones left wrapper */}
                 <div id="format__design">
@@ -180,7 +182,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="email__main">
+      <div className="email__main" id="email__main">
         <section id="send-to-kindle">
           <form className="form__send" action="/enviar" method="post">
             <label for="kindle-email" className="label__send">
@@ -199,6 +201,67 @@ function App() {
             </button>
           </form>
         </section>
+      </div>
+      <div className="help__wrapper">
+        <div className="title__div">
+          <h3 className="help__title">Convert in 3 Simple Steps</h3>
+        </div>
+        <div className="instructions__div">
+          <a href="#header-description">
+            <div className="help__orders">
+              <img
+                src="Images/subir.png"
+                id="upload__img"
+                className="order__img"
+              ></img>
+              <h5 className="orders__title">Upload your files</h5>
+              <p className="orders__p">
+                Upload your files to get started. Make sure your documents are
+                in a supported format for the best results. Check the uploaded
+                content carefully to ensure everything looks correct and no
+                errors are present. Once uploaded, your files are ready for
+                preview or further actions, including sharing or downloading
+                them securely.
+              </p>
+            </div>
+          </a>
+          <a href="#settings__name">
+            <div className="help__orders">
+              <img
+                src="Images/configuration.png"
+                id="conf__img"
+                className="order__img"
+              ></img>
+              <h5 className="orders__title">Choose your settings</h5>
+              <p className="orders__p">
+                Select your preferred settings (font, font size, line
+                spacing...) to personalize your reading experience. Use the
+                preview on the right to see how your book will look with these
+                settings. Adjust the options until the layout feels comfortable
+                for you. Experiment with different combinations to find the
+                perfect setup for your reading style.
+              </p>
+            </div>
+          </a>
+          <a href="#email__main">
+            <div className="help__orders">
+              <img
+                src="Images/enviar.png"
+                id="send__img"
+                className="order__img"
+              ></img>
+              <h5 className="orders__title">Send to kindle</h5>
+              <p className="orders__p">
+                Enter your Kindle email in the field provided to ensure your
+                converted files are delivered correctly. Double-check that the
+                email address is typed accurately to avoid any mistakes. Make
+                sure it matches the email linked to your Kindle account. Once
+                confirmed, your book will be ready to appear on your device,
+                ready for you to enjoy.
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
     </>
   );

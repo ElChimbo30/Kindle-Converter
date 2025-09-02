@@ -33,7 +33,7 @@ body {
   position: absolute;
   bottom: -100px; /* mueve el óvalo hacia abajo */
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 200px; /* altura del óvalo */
   background-color: #f9fafb; /* color deseado */
   border-radius: 50%; /* mantiene forma de óvalo horizontal */
@@ -130,7 +130,7 @@ body {
 }
 
 .advanced__main__wrapper {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -360,8 +360,10 @@ body {
   font-weight: bold;
   margin-bottom: 5px;
   width: 100%;
+  margin-bottom: 200px;
 }
 .send__button {
+  margin-top: 10px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -372,20 +374,20 @@ body {
   color: #fff;
   cursor: pointer;
   font-family: "Montserrat", "Segoe UI", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: normal;
   min-height: 55px;
-  width: auto;
+  height: 60px;
+  min-width: auto;
+  width: 200px;
   padding: 14px 28px;
-  text-align: center;
   text-decoration: none;
   transition: all 250ms ease;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
-  display: block; /* necesario para que width funcione */
 }
 
 .send__button:hover {
@@ -400,9 +402,12 @@ body {
 }
 
 .input__email {
-  width: auto;
+  min-width: auto;
+  width: 350px;
+  min-height: auto;
+  height: 65px;
   padding: 14px 18px;
-  font-size: 16px;
+  font-size: 24px;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif;
   color: #333;
@@ -412,10 +417,15 @@ body {
   outline: none;
   transition: all 200ms ease;
   box-sizing: border-box;
+  text-align: center;
 }
 
 /* Al hacer focus */
 .input__email:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+.input__email:hover {
   border-color: var(--main-color);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
@@ -430,6 +440,7 @@ body {
   display: flex;
   align-items: center; /* centra horizontalmente */
   justify-content: center;
+  flex-direction: column;
   gap: 12px; /* separación entre input y botón */
   width: 100%; /* ocupa todo el ancho disponible */
 }
@@ -438,9 +449,86 @@ body {
   width: 100%;
   display: flex; /* o flex-column si quieres apilar input + botón */
   width: auto;
-  gap: 12px; /* si es horizontal */
   align-items: center; /* centra verticalmente */
-  font-size: 32px;
+  font-size: 42px;
   font-family: Montserrat;
   font-weight: bold;
+  margin-top: -10px;
+}
+
+/* Instructions part */
+
+.help__wrapper {
+  background: linear-gradient(45deg, #5697bf, var(--secundary-color));
+  margin-bottom: 400px;
+  padding-bottom: 20px;
+}
+
+.title__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 42px;
+  font-family: "Montserrat";
+}
+
+.instructions__div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  align-items: stretch; /* hace que todos los hijos tengan la misma altura */
+}
+
+.help__orders {
+  background-color: var(--main-color);
+  border-radius: 20px;
+  width: 500px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-wrap: balance;
+}
+
+.help__orders:hover {
+  transform: translateY(-4px); /* se eleva 4px */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* sombra más intensa */
+}
+
+.orders__title {
+  font-size: 40px;
+  font-family: "Montserrat";
+  margin: 0px;
+}
+
+.order__img {
+  padding: 20px;
+  width: 200px;
+}
+
+.orders__p {
+  font-family: "Montserrat";
+  text-align: center;
+  font-weight: 400;
+  padding: 0px 8px;
+  text-wrap: balance;
+}
+
+.help__title {
+  font-family: "Montserrat";
+  font-size: 46px;
+}
+
+a {
+  width: inherit;
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
 }
