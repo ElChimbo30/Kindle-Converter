@@ -2,12 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Oswald:wght@200..700&display=swap");
 
+html,
 body {
   margin: 0;
+  padding: 0;
   width: 100%;
+  min-width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #f9fafb;
+  background-color: #f9f9f9;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* HEADER */
@@ -18,7 +26,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   color: var(--text-color);
   background-color: var(--secundary-color);
   height: 452px;
@@ -222,7 +230,7 @@ body {
   text-align: center;
   max-width: 250px;
   width: 226px;
-  height: 32px;
+  height: 60px;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid #d3d3d3;
@@ -251,7 +259,7 @@ body {
   width: 100%;
   font-size: 20px;
   text-align: center;
-  max-width: 250px;
+  width: 226px;
   height: 60px;
   padding: 12px;
   border-radius: 12px;
@@ -460,7 +468,6 @@ body {
 
 .help__wrapper {
   background: linear-gradient(45deg, #5697bf, var(--secundary-color));
-  margin-bottom: 400px;
   padding-bottom: 20px;
 }
 

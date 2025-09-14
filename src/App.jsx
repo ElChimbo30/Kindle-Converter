@@ -12,7 +12,7 @@ function App() {
         </div>
         <p className="header-description" id="header-description">
           Convert and send your books to Kindle in a{" "}
-          <div id="click__description">SINGLE CLICK</div>{" "}
+          <span id="click__description">SINGLE CLICK</span>{" "}
         </p>
 
         <div id="archivoDiv">
@@ -263,6 +263,25 @@ function App() {
           </a>
         </div>
       </div>
+      <footer class="footer">
+        <p>© 2025 Kindle Converter. Todos los derechos reservados.</p>
+        <p>
+          Kindle Converter no está afiliado, patrocinado ni aprobado por Amazon
+          o Kindle™. Kindle es una marca registrada de Amazon.com, Inc.
+        </p>
+        <nav>
+          <a href="/aviso-legal">Aviso Legal</a> |
+          <a href="/privacidad">Política de Privacidad</a> |
+          <a href="/terminos">Términos y Condiciones</a> |
+          <a href="/cookies">Política de Cookies</a>
+        </nav>
+        <p>
+          Contacto:{" "}
+          <a href="mailto:soporte@kindleconverter.com">
+            soporte@kindleconverter.com
+          </a>
+        </p>
+      </footer>
     </>
   );
 }
