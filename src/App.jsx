@@ -263,24 +263,47 @@ function App() {
           </a>
         </div>
       </div>
-      <footer class="footer">
-        <p>© 2025 Kindle Converter. Todos los derechos reservados.</p>
-        <p>
-          Kindle Converter no está afiliado, patrocinado ni aprobado por Amazon
-          o Kindle™. Kindle es una marca registrada de Amazon.com, Inc.
-        </p>
-        <nav>
-          <a href="/aviso-legal">Aviso Legal</a> |
-          <a href="/privacidad">Política de Privacidad</a> |
-          <a href="/terminos">Términos y Condiciones</a> |
-          <a href="/cookies">Política de Cookies</a>
-        </nav>
-        <p>
-          Contacto:{" "}
-          <a href="mailto:soporte@kindleconverter.com">
-            soporte@kindleconverter.com
+      <footer className="footer">
+        <div>
+          <h1 className="title__footer">Kindle Express</h1>
+        </div>
+        <div className="wrapper__footer">
+          <a href="#main__header">
+            <p>Home</p>
           </a>
-        </p>
+          <a>
+            <p>Copyright</p>
+          </a>
+          <a>
+            <p>Privacy Policy</p>
+          </a>
+          <a>
+            <p>Terms and Conditions</p>
+          </a>
+          <a>
+            <p>Cookie Policy</p>
+          </a>
+          <a>
+            <p>DMCA</p>
+          </a>
+        </div>
+
+        <div className="footer-bottom">
+          <div className="linea-contenedor">
+            <div className="linea"></div>
+          </div>
+
+          <div className="wrapper2__footer">
+            <p className="copy__text">
+              © 2025 Kindle Express All rights reserved.
+            </p>
+            <p className="copy__p">
+              Kindle Express is not affiliated with, endorsed by, or sponsored
+              by YouTube or Google. All product names, logos, and brands are
+              property of their respective owners.
+            </p>
+          </div>
+        </div>
       </footer>
     </>
   );
